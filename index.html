@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+
+    <!--tailwind css and daisyUi link -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- google font connect to css-->
+    <style>
+        * {
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="min-h-screen bg-base-300">
+
+    <!-- All Section Control div -->
+    <div class="max-w-6xl mx-auto p-5 md:p-10">
+
+        <!-- Header section -->
+        <header class="mb-5">
+            <h1 class="text-3xl font-bold text-[#002C5C]">Job Application Tracker</h1>
+        </header>
+
+        <!-- grid section -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-14">
+
+            <!-- 01: total box -->
+            <div class="card bg-base-100 shadow-sm p-5 hover:shadow-lg transition">
+                <p class="font-medium text-neutral-500">Total</p>
+                <h2 id="total-count" class="font-bold text-3xl text-black">0</h2>
+            </div>
+
+            <!-- 02: interview box -->
+            <div class="card bg-base-100 shadow-sm p-5 hover:shadow-lg transition">
+                <p class="text-neutral-500 font-medium">Interview</p>
+                <h2 id="interview-count" class="font-bold text-3xl text-green-600">0</h2>
+            </div>
+
+            <!-- 03: rejected box -->
+            <div class="card bg-base-100 shadow-sm p-5 hover:shadow-lg transition">
+                <p class="text-neutral-500 font-medium">Rejected</p>
+                <h2 id="rejected-count" class="font-bold text-red-600 text-3xl">0</h2>
+            </div>
+        </section>
+
+        <!-- available job section -->
+        <section>
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-[#002C5C]">Available Jobs</h3>
+                <p id="job-count" class="text-neutral-700">0 Jobs</p>
+            </div>
+
+            <!-- button tab design with --- daisy ui -->
+            <div class="tabs tabs-boxed mb-4">
+                <button id="all-tab" class="tab tab-active">All</button>
+                <button id="interview-tab" class="tab">Interview</button>
+                <button id="rejected-tab" class="tab">Rejected</button>
+            </div>
+
+            <!-- main jobs content -->
+            <div id="jobs-container" class="grid grid-cols-1 gap-4"></div>
+        </section>
+    </div>
+
+<!-- javascript file add -->
+
+
+</body>
+
+</html>
